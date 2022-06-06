@@ -1,0 +1,12 @@
+﻿<Application x:Class="TrackerForm.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TrackerForm"
+             xmlns:VM="clr-namespace:TrackerForm.ViewModel"
+             xmlns:Model="clr-namespace:TrackerForm.Models"             
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+       
+        
+    </Application.Resources>
+</Application>

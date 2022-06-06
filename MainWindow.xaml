@@ -1,0 +1,55 @@
+﻿<Window x:Class="TrackerForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrackerForm"
+        xmlns:VM="clr-namespace:TrackerForm.ViewModel"
+        xmlns:Models="clr-namespace:TrackerForm.Models"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="450" Width="800"
+        Background="#EBD2CD">
+
+    <Window.DataContext>
+        <VM:MainWindowVM/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="700*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel 
+                    Background="#125446">
+            <Button x:Name="Tracker_Btn"
+                    Height="40"
+                    Content="Tracker"
+                    HorizontalAlignment="Stretch"
+                    Background="#112221"
+                    BorderThickness="0,0"
+                    Click="btn_Click"
+                    FontFamily="Candara" 
+                    FontSize="16" 
+                    FontWeight="Bold" 
+                    Foreground="#EBD2CD"
+                    Command="{Binding EditStudentCommand}">
+
+            </Button>
+            <Button Content="Motivation"
+                    Height="40"
+                    HorizontalAlignment="Stretch"
+                    BorderThickness="0,0.5,0,0"
+                    Background="#112221"
+                    FontFamily="Candara" FontSize="16" FontWeight="Bold" Foreground="#EBD2CD"/>
+        </StackPanel>
+        
+            
+        
+        <Grid Grid.Column="1">
+            <Models:Tracker x:Name="Tracker_Control"
+                Visibility="Hidden"/>
+
+
+        </Grid>
+    </Grid>
+</Window>
