@@ -10,7 +10,7 @@ namespace TrackerForm.ViewModel
 {
     public abstract class ViewModel : INotifyPropertyChanged
     {
-        //public BaseViewModel ViewModel { get; set; }
+        //public BaseViewModel ViewModel { get; set; }212
 
 
 
